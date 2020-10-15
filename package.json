@@ -6,7 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start":"node server.js",
-    "heroku-postbuild":"cd habit-builder && npm install && npm run build"
+    "build": "cd habit-builder && npm run build",
+    "install-client": "cd habit-builder && npm install",
+    "server":"nodemon server.js",
+    "client":"cd habit-builder && npm start",
+    "dev":"concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild":"cd habit-builder && npm install && npm start"
   },
   "author": "Anurag",
   "license": "ISC",
