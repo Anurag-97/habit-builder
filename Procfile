@@ -1,0 +1,1 @@
+web: node ./habit-builder/src/index.js
