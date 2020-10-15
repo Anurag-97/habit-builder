@@ -11,7 +11,7 @@
     "server":"nodemon server.js",
     "client":"cd habit-builder && npm start",
     "dev":"concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install-client && npm run build"
+    "heroku-postbuild":"cd habit-builder npm install && npm run build"
   },
   "author": "Anurag",
   "license": "ISC",
