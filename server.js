@@ -47,9 +47,9 @@ app.delete('/habits/delete/:id',(req,res)=>{
     .catch(err=>res.status(400).send(`Opps !! ${err}`))
 })
 if(process.env.NODE_ENV==='production'){
-    app.use(express.static('client/build'));
+    app.use(express.static('habit-builder/build'));
     app.get('*',(req,res)=>{
-        res.sendFile(path.join(__dirname,'client','build','index.html'));
+        res.sendFile(path.join(__dirname,'habit-builder','build','index.html'));
     })
 }
 app.listen(port, ()=>{
